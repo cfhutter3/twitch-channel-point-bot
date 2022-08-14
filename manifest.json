@@ -1,0 +1,14 @@
+{
+  "name": "Twitch Channel Points Bot",
+  "description": "Auto-click the channel points button whenever it pops up!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitch.tv/*"],
+      "js": ["inject.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
